@@ -1,3 +1,7 @@
-# reveal.js template
+### Install
 
-> To do: Add instructions here.
+```
+npm install -g gulp
+npm install
+bower install
+```
