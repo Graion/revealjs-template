@@ -3,3 +3,33 @@ body {
 	background: #4B843E;
 	background-color: #4B843E;
 }
+
+.cucumber-components-container {
+	margin: 0px auto !important;
+	margin-top: 70px !important;
+	overflow: hidden;
+	width: 80%;
+}
+
+.cucumber-components-element {
+	line-height: 140px !important;
+    font-weight: 500 !important;
+	font-size: 40px !important;
+	background: #929292;
+	border-radius: 10px;
+	height: 140px;
+	width: 30%;
+}
+
+.centered {
+	margin-left: 50px !important;
+	float: left;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
