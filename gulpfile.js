@@ -1,8 +1,13 @@
 var gulp = require('gulp'),
-  connect = require('gulp-connect');
+  browserSync = require('browser-sync'),
+  reload = browserSync.reload;
 
-gulp.task('serve', function() {
-  connect.server();
+gulp.task('serve', ['sass'], function() {
+  browserSync({
+    server: {
+      baseDir: '.'
+    }
+  });
+
+  gulp.watch(['*.html', 'css/build/**/*.css', 'js/**/*.js'], {cwd: '.'}, reload);
 });
-
-gulp.task('default', ['serve']);
