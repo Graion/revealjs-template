@@ -1,0 +1,91 @@
+// This file is used to set the template and override some styles in the
+// presentation.
+
+// You can't touch this!
+@import "../../components/reveal.js/css/theme/template/mixins";
+@import "../../components/reveal.js/css/theme/template/settings";
+// ... ok, now you can touch
+
+// You can choose a different theme changing the last part of this import.
+// Posible themes: beige/black/blood/league/moon/night/serif/simple/sky/solarized/white
+@import "../../components/reveal.js/css/theme/source/black";
+
+// Also you can override all the following parameters in the theme. You can
+// uncomment this SASS variables and chage the value.
+
+// Background of the presentation
+$backgroundColor: #4B843E;
+
+// Primary/body text
+// $mainFont: 'Lato', sans-serif;
+// $mainFontSize: 36px;
+// $mainColor: #eee;
+
+// Vertical spacing between blocks of text
+// $blockMargin: 20px;
+
+// Headings
+// $headingMargin: 0 0 $blockMargin 0;
+// $headingFont: 'League Gothic', Impact, sans-serif;
+// $headingColor: #eee;
+// $headingLineHeight: 1.2;
+// $headingLetterSpacing: normal;
+// $headingTextTransform: uppercase;
+// $headingTextShadow: none;
+// $headingFontWeight: normal;
+// $heading1TextShadow: $headingTextShadow;
+
+// $heading1Size: 3.77em;
+// $heading2Size: 2.11em;
+// $heading3Size: 1.55em;
+// $heading4Size: 1.00em;
+
+// Links and actions
+// $linkColor: #13DAEC;
+// $linkColorHover: lighten( $linkColor, 20% );
+
+// Text selection
+// $selectionBackgroundColor: #FF5E99;
+// $selectionColor: #fff;
+
+// Generates the presentation background, can be overridden
+// to return a background image or gradient
+// @mixin bodyBackground() {
+//   background: $backgroundColor;
+// }
+
+// You can't touch this!
+@import "../../components/reveal.js/css/theme/template/theme";
+// ... ok, now you can touch
+
+// Add your own styles starting here...
+
+.cucumber-components-container {
+	margin: 0px auto !important;
+	margin-top: 70px !important;
+	overflow: hidden;
+	width: 80%;
+}
+
+.cucumber-components-element {
+	line-height: 140px !important;
+	font-weight: 500 !important;
+	font-size: 40px !important;
+	background: #929292;
+	border-radius: 10px;
+	height: 140px;
+	width: 30%;
+}
+
+.centered {
+	margin-left: 50px !important;
+	float: left;
+}
+
+.pull-left {
+	float: left;
+}
+
+.pull-right {
+	float: right;
+}
