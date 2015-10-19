@@ -132,6 +132,26 @@
 
                         * Descripción del Frequent Flyer
 
+                        ```text
+                        Scenario: New members should start out as Bronze members
+                        Given Jill Smith is not a Frequent Flyer member
+                        When she registers on the Frequent Flyer program
+                        Then she should have a status of Bronze
+                        ```
+
+                        ```text
+                        Scenario: Members should get status updates based on status points earned
+                        Given a member has a status of &lt;initialStatus&gt;
+                        And he has &lt;initialStatusPoints&gt; status points
+                        When he earns &lt;extraPoints&gt; extra status points
+                        Then he should have a status of &lt;finalStatus&gt;
+                        Examples:
+                        | initialStatus | initialStatusPoints | extraPoints | finalStatus |
+                        | Bronze        | 0                   | 300         | Silver      |
+                        | Silver        | 0                   | 700         | Gold        |
+                        | Gold          | 0                   | 150         | Platinum    |
+                        ```
+
                         ![](assets/using_examples_01.png)
                     </section>
 
