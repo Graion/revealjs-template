@@ -94,3 +94,15 @@ h6.breadcrumb {
 	text-align: left;
 	color: #65B354;
 }
+
+section.inverted {
+
+	h1, h2, h3, h4 {
+		color: $backgroundColor;
+	}
+
+	img {
+		border: none;
+		box-shadow: none;
+	}
+}
