@@ -36,78 +36,93 @@
                 # Behaviour Driven Development
             </section>
 
-            <section data-markdown>
-                ## BDD - Behaviour Driven Development
+            <section>
+                <h6 class="breadcrumb">BDD > Definición</h6>
 
-                * Definición: *Metodología* de desarrollo de software en el que *se especifica y diseña* una aplicación *mediante la descripción de su comportamiento* para un observador externo.
+                <section data-markdown>
+                  ### *Metodología* de desarrollo de software en el que *se especifica y diseña* una aplicación *mediante la descripción de su comportamiento* para un observador externo.
+                </section>
+
+                <section>
+                    <h2>BDD es TDD sin que sea necesario que todo el equipo del proyecto tenga conocimientos de programación</h2>
+                </section>
+
             </section>
 
             <section>
-                BDD es TDD cuando todos los miembros del proyecto tienen conocimientos y habilidades de programación
+                <h6 class="breadcrumb">BDD > Definición > En pocas palabras</h6>
+
+                <section data-markdown>
+                    ### **Usar ejemplos** en múltiples niveles para crear un **entendimiento compartido** para entregar **software de valor**
+                </section>
+
             </section>
 
-                <section>
-                    <h6 class="breadcrumb">BDD > Beneficios en su aplicación</h6>
+            <section>
+                <h6 class="breadcrumb">BDD</h6>
 
-                    <section data-markdown>
-                        ## Foco en los comportamientos del negocio: *el "por qué" detrás del código*
-                    </section>
+                <section data-markdown>
+                  # Beneficios en su aplicación
+                </section>
+            </section>
 
-                    <section data-markdown>
-                        ## Es acerca de compartir comportamientos esperados entre todos los miembros del proyecto
-                    </section>
+            <section>
+                <h6 class="breadcrumb">BDD > Beneficios en su aplicación</h6>
 
-                    <section data-markdown>
-                        ## Guía el desarrollo
-                    </section>
-
-                    <section data-markdown>
-                        ## Focaliza el esfuerzo
-                    </section>
-
-                    <section data-markdown>
-                        ## Reduce el desperdicio y los requerimientos no alineados
-                    </section>
-
-                    <section data-markdown>
-                        ## Genera software de mayor valor
-                    </section>
-
-                    <section data-markdown>
-                        ## Permite aplicar cambios de modo seguro
-                    </section>
-
-                    <section data-markdown>
-                        ## Releases más confiables
-                    </section>
-
-                    <section data-markdown>
-                        ## Reduce el costo de mantenimiento
-                    </section>
-
+                <section data-markdown>
+                    ## Es acerca de compartir comportamientos esperados entre todos los miembros del proyecto
                 </section>
 
-                <section>
-                    <h6 class="breadcrumb">BDD > Desafíos para su aplicación</h6>
-
-                    <section data-markdown>
-                        ## Requiere compromiso y colaboración de Stakeholders, BA y/o Product Owner
-                    </section>
-
-                    <section data-markdown>
-                        ## Escribir escenarios útiles lleva práctica
-                    </section>
-
+                <section data-markdown>
+                    ## Guía el desarrollo
                 </section>
 
-                <section>
-                    <h6 class="breadcrumb">BDD > En pocas palabras</h6>
-
-                    <section data-markdown>
-                        ### **Usar ejemplos** en múltiples niveles para crear un **entendimiento compartido** para entregar **software de valor**
-                    </section>
-
+                <section data-markdown>
+                    ## Focaliza el esfuerzo en comprender las reglas del negocio
                 </section>
+
+                <section data-markdown>
+                    ## Mejora el entendimiento de los requerimientos (incluso para el cliente)
+                </section>
+
+                <section data-markdown>
+                    ## *Build the right software*
+                </section>
+
+                <section data-markdown>
+                    ## Releases más confiables
+                </section>
+            </section>
+
+            <section>
+                <h6 class="breadcrumb">BDD</h6>
+
+                <section data-markdown>
+                  # Desafíos para su aplicación
+                </section>
+            </section>
+
+            <section>
+                <h6 class="breadcrumb">BDD > Desafíos para su aplicación</h6>
+
+                <section data-markdown>
+                    ## Requiere compromiso y colaboración de Stakeholders, BA y/o Product Owner
+                </section>
+
+                <section data-markdown>
+                    ## Escribir escenarios útiles requiere práctica
+                </section>
+
+            </section>
+
+            <section>
+                <h6 class="breadcrumb">BDD</h6>
+
+                <section data-markdown>
+                    ## **Usar ejemplos** en múltiples niveles para crear un entendimiento compartido para entregar software de valor
+                </section>
+
+            </section>
 
                 <section>
                     <h6 class="breadcrumb">BDD > Usando ejemplos</h6>
@@ -122,43 +137,37 @@
                     </section>
 
                     <section data-markdown>
-                        ## Ejemplo 1
-
-                        * Descripción de un escenario Piedra, Papel o Tijera
+                        #### Ejemplo 1 - Escenarios del Piedra, Papel o Tijera
                     </section>
 
                     <section data-markdown>
-                        ## Ejemplo 2
-
-                        * Descripción del Frequent Flyer
+                        #### Ejemplo 2 - Escenarios del Frequent Flyer
 
                         ```text
                         Scenario: New members should start out as Bronze members
-                        Given Jill Smith is not a Frequent Flyer member
-                        When she registers on the Frequent Flyer program
-                        Then she should have a status of Bronze
+                          Given Jill Smith is not a Frequent Flyer member
+                          When she registers on the Frequent Flyer program
+                          Then she should have a status of Bronze
                         ```
 
                         ```text
                         Scenario: Members should get status updates based on status points earned
-                        Given a member has a status of &lt;initialStatus&gt;
-                        And he has &lt;initialStatusPoints&gt; status points
-                        When he earns &lt;extraPoints&gt; extra status points
-                        Then he should have a status of &lt;finalStatus&gt;
-                        Examples:
-                        | initialStatus | initialStatusPoints | extraPoints | finalStatus |
-                        | Bronze        | 0                   | 300         | Silver      |
-                        | Silver        | 0                   | 700         | Gold        |
-                        | Gold          | 0                   | 150         | Platinum    |
+                          Given a member has a status of &lt;initialStatus&gt;
+                          And he has &lt;initialStatusPoints&gt; status points
+                          When he earns &lt;extraPoints&gt; extra status points
+                          Then he should have a status of &lt;finalStatus&gt;
+
+                          Examples:
+                          | initialStatus | initialStatusPoints | extraPoints | finalStatus |
+                          | Bronze        | 0                   | 300         | Silver      |
+                          | Silver        | 0                   | 700         | Gold        |
+                          | Gold          | 0                   | 150         | Platinum    |
                         ```
 
-                        ![](assets/using_examples_01.png)
                     </section>
 
                     <section data-markdown>
-                        ## Ejemplo 3
-
-                        * Descripción del conversor de monedas
+                        #### Ejemplo 3 - Escenarios del conversor de monedas
 
                         ```text
                         Given que el tipo de cambio es X
@@ -169,9 +178,13 @@
 
                 </section>
 
-                <section data-markdown>
-                    ### BDD
-                    # Entendimiento compartido
+                <section>
+                    <h6 class="breadcrumb">BDD</h6>
+
+                    <section data-markdown>
+                        ## Usar ejemplos en múltiples niveles para crear un **entendimiento compartido** para entregar software de valor
+                    </section>
+
                 </section>
 
                 <section>
@@ -193,9 +206,13 @@
 
                 </section>
 
-                <section data-markdown>
-                    ### BDD
-                    # Software de valor
+                <section>
+                    <h6 class="breadcrumb">BDD</h6>
+
+                    <section data-markdown>
+                        ## Usar ejemplos en múltiples niveles para crear un entendimiento compartido para entregar **software de valor**
+                    </section>
+
                 </section>
 
                 <section>
@@ -245,37 +262,38 @@
                 </section>
 
                 <section data-markdown>
-                    ## Arquitectura de prueba
+                    ##Implementaciones
+                </section>
 
-                    ![](assets/arquitectura_de_prueba.png)
+                <section>
+                    <h6 class="breadcrumb">Cucumber > Implementaciones</h6>
+
+                    <section>
+                      Ruby, Java, Groovy, JavaScript, .NET, PHP, C++
+                    </section>
                 </section>
 
                 <section data-markdown>
-                    ### Cucumber
-                    # Componentes
+                    ## Componentes
                 </section>
 
                 <section>
                     <h6 class="breadcrumb">Cucumber > Componentes</h6>
 
-                    <div class="cucumber-components-container">
-                        <div class="cucumber-components-element pull-left">
-                            Features
-                        </div>
-                        <div class="cucumber-components-element centered">
-                            Step Definitions
-                        </div>
-                        <div class="cucumber-components-element pull-right">
-                            Helpers
-                        </div>
-                    </div>
+                    <section>
+                      <div class="cucumber-components-container">
+                          <div class="cucumber-components-element pull-left">
+                              Features
+                          </div>
+                          <div class="cucumber-components-element centered">
+                              Step Definitions
+                          </div>
+                          <div class="cucumber-components-element pull-right">
+                              Helpers
+                          </div>
+                      </div>
+                    </section>
 
-                </section>
-
-                <section data-markdown>
-                    ####Implementaciones
-
-                    Ruby, Java, Groovy, JavaScript, .NET, PHP, C++
                 </section>
 
                 <section data-markdown>
@@ -285,16 +303,18 @@
                 </section>
 
                 <section data-markdown>
-                    #### Nuestros mandamientos
+                    #### Los mandamientos
 
-                    1. ### Nuestros Cucumber features deben conducir nuestra implementación, no reflejarla</h5>
-                    2. ### Nuestros Cucumber features deben ser escritos antes que el código que implementan dichos features</h5>
+                    1. ### Los escenarios deben conducir nuestra implementación, no reflejarla</h5>
+                    2. ### Los escenarios deben ser escritos antes que el código que implementan dichos features</h5>
+                </section>
+
+                <section data-markdown>
+                    ## Componentes de un .feature
                 </section>
 
                 <section>
-                    <section data-markdown>
-                        ## Componentes de un .feature
-                    </section>
+                    <h6 class="breadcrumb">Cucumber > Componentes de un .feature</h6> 
 
                     <section data-markdown>
                         #### Feature
@@ -312,9 +332,9 @@
                         Es un template para realizar un conjunto de pruebas
                     </section>
                     <section data-markdown>
-                        #### background
+                        #### Background
 
-                        Es uno o más pasos que se ejecutan antes de todos los scenarios
+                        Es uno o más pasos que se ejecutan antes de cada escenario
                     </section>
                     <section data-markdown>
                         #### Given
@@ -341,14 +361,12 @@
 	                # Shopbeam
                 </section>
 
+                <section data-markdown>
+                  # Herramientas
+                </section>
+
                 <section>
-
-                    <section data-markdown>
-                        # Herramientas
-
-                        ## * Capybara + Watir (u otro)
-                        ## * FactoryGirl
-                    </section>
+                    <h6 class="breadcrumb">Caso de estudio > Shopbeam > Herramientas</h6>
 
                     <section data-markdown>
                         #### Capybara + Watir (u otro)
@@ -361,16 +379,26 @@
                     <section data-markdown>
                         ####FactoryGirl
 
-                        * Es una librería que permite definir objetos (en Ruby) para utilizar como información para nuestros tests
+                        * ### Es una librería que permite definir objetos (en Ruby) para utilizar como información para nuestros tests
                         <br>
-                        * Permite tener fixtures de los cuales valernos para los tests que tenemos definidos
+                        * ### Permite tener fixtures de los cuales valernos para los tests que tenemos definidos
+                    </section>
+                </section>
+
+                <section>
+                    <h6 class="breadcrumb">Caso de estudio > Shopbeam</h6>
+
+                    <section data-markdown>
+                      # Demo
                     </section>
                 </section>
 
                 <section data-markdown>
-                    # ¡Muchas gracias!
+                    # ¿Preguntas?
+                </section>
 
-                    ## ¿Preguntas?
+                <section data-markdown>
+                    # ¡Muchas gracias!
                 </section>
 
 

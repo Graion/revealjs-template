@@ -95,6 +95,17 @@ h6.breadcrumb {
 	color: #65B354;
 }
 
+h2 {
+	strong {
+		text-shadow: 3px 3px #000;
+    text-transform: uppercase;
+	}
+}
+
+pre {
+	font-size: 26px !important;
+}
+
 section.inverted {
 
 	h1, h2, h3, h4 {
