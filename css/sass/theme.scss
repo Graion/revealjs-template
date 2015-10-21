@@ -95,10 +95,12 @@ h6.breadcrumb {
 	color: #65B354;
 }
 
-h2 {
+h2.definition {
+	color: #65B354;
+
 	strong {
-		text-shadow: 3px 3px #000;
-    text-transform: uppercase;
+		text-shadow: 1px 1px 3px #444;
+		color: $mainColor;
 	}
 }
 
