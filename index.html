@@ -176,7 +176,7 @@
                         ```
 
                         ```text
-                        Scenario: Members should get status updates based on status points earned
+                        Scenario Outline: Members should get status updates based on status points earned
                           Given a member has a status of &lt;initialStatus&gt;
                           And he has &lt;initialStatusPoints&gt; status points
                           When he earns &lt;extraPoints&gt; extra status points
@@ -195,7 +195,7 @@
                         #### Ejemplo 3 - Escenarios del conversor de monedas
 
                         ```text
-                        Scenario Outline: jugadorUno vs jugadorDos
+                        Scenario Outline: Comprador cambia pesos por dolares
                           Given comprador paga &lt;pesos&gt; pesos
                           When el tipo de cambio es &lt;cambio&gt;
                           Then comprador adquiere &lt;dolares&gt; dólares
@@ -347,7 +347,7 @@
                 </section>
 
                 <section>
-                    <h6 class="breadcrumb">Cucumber > Componentes de un .feature</h6> 
+                    <h6 class="breadcrumb">Cucumber > Componentes de un .feature</h6>
 
                     <section data-markdown>
                         #### Feature
