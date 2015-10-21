@@ -138,6 +138,31 @@
 
                     <section data-markdown>
                         #### Ejemplo 1 - Escenarios del Piedra, Papel o Tijera
+
+                        ```text
+                        Scenario: PIEDRA vs PAPEL
+                          Given jugadorUno juega PIEDRA
+                          When jugadorDos juega PAPEL
+                          Then gana jugadorDos
+                        ```
+
+                        También se puede generalizar
+
+                        ```text
+                        Scenario Outline: jugadorUno vs jugadorDos
+                          Given jugadorUno juega &lt;elementoUno&gt;
+                          When jugadorDos juega &lt;elementoDos&gt;
+                          Then &lt;resultado&gt;
+
+                          Examples:
+                          | elementoUno | elementoDos | resultado       |
+                          | PIEDRA      | PAPEL       | gana jugadorDos |
+                          | PIEDRA      | TIJERA      | gana jugadorUno |
+                          | PIEDRA      | PIEDRA      | hay empate      |
+                          | PAPEL       | PIEDRA      | gana jugadorUno |
+                          ...
+                        ```
+
                     </section>
 
                     <section data-markdown>
@@ -170,10 +195,18 @@
                         #### Ejemplo 3 - Escenarios del conversor de monedas
 
                         ```text
-                        Given que el tipo de cambio es X
-                        cuando sumo 5 pesos con 2 dolares
-                        entonces tengo tantos pesos o tantos dolares
+                        Scenario Outline: jugadorUno vs jugadorDos
+                          Given comprador paga &lt;pesos&gt; pesos
+                          When el tipo de cambio es &lt;cambio&gt;
+                          Then comprador adquiere &lt;dolares&gt; dólares
+
+                          Examples:
+                          | pesos | cambio | dolares |
+                          | 150   | 10.7   | 1605    |
+                          | 300   |  9.5   | 2850    |
+                          | 590   |  9.9   | 5841    |
                         ```
+
                     </section>
 
                 </section>
