@@ -74,11 +74,15 @@ h2.definition {
 	}
 }
 
-pre {
-	font-size: 26px !important;
+.reveal {
 
-	code.lang-text {
-		background: #666;
+	pre {
+		font-size: 26px;
+		width: 100%;
+
+		code.lang-text {
+			background: #666;
+		}
 	}
 }
 
