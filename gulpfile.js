@@ -2,7 +2,9 @@ var gulp = require('gulp'),
   browserSync = require('browser-sync'),
   reload = browserSync.reload,
   sass = require('gulp-sass'),
-  del = require('del');
+  del = require('del'),
+  ghPages = require('gh-pages'),
+  path = require('path');
 
 gulp.task('sass', function () {
   gulp.src('css/sass/**/*.scss')
@@ -25,20 +27,29 @@ gulp.task('clean', function () {
   return del('dist/**/*');
 });
 
-gulp.task('build', ['clean'], function () {
-  gulp.src(['index.html'])
+gulp.task('build', ['sass'], function () {
+  gulp.src('index.html')
     .pipe(gulp.dest('dist'));
 
-  gulp.src(['js/**/*.js'])
+  gulp.src('js/**/*.js')
     .pipe(gulp.dest('dist/js'));
 
-  gulp.src(['css/**/*.css'])
+  gulp.src('css/**/*.css')
     .pipe(gulp.dest('dist/css'));
 
-  gulp.src(['components/reveal.js/lib/**/*.{css,js,eot,ttf,woff}'])
+  gulp.src('components/reveal.js/lib/**/*.{css,js,eot,ttf,woff}')
     .pipe(gulp.dest('dist/lib'));
 
-  gulp.src(['components/reveal.js/**/*.{css,js,eot,ttf,woff}'])
+  gulp.src('components/reveal.js/**/*.{css,js,eot,ttf,woff}')
     .pipe(gulp.dest('dist/components/reveal.js'));
+});
+
+gulp.task('gh-deploy', function () {
+  ghPages.publish(path.join(__dirname, 'dist'), {
+    message: 'Updated on ' + new Date().toString(),
+    logger: function (message) {
+      console.log('\t[gh-pages] ' + message);
+    }
+  });
 });
 

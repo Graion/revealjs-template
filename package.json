@@ -4,6 +4,7 @@
   "devDependencies": {
     "browser-sync": "^2.11.1",
     "del": "^2.2.0",
+    "gh-pages": "^0.8.0",
     "gulp": "^3.9.0",
     "gulp-sass": "^2.1.1"
   },
