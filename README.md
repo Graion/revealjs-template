@@ -1,6 +1,18 @@
 # reveal.js template
 
-> To do: Add instructions here.
+## Install
+
+```text
+npm install -g gulp
+npm install
+bower install
+```
+
+## Run
+
+```text
+gulp serve
+```
 
 ## How to deploy to Github pages
 
@@ -23,3 +35,11 @@ gulp clean
 gulp build
 gulp gh-deploy
 ```
+
+Now you can enjoy this presentation in:
+
+- http://github-username.github.io/github-repo-name
+
+when the URL of the repository is:
+
+- https://github.com/github-username/github-repo-name
