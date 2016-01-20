@@ -31,6 +31,9 @@ gulp.task('build', ['sass'], function () {
   gulp.src('index.html')
     .pipe(gulp.dest('dist'));
 
+  gulp.src('assets/**/*')
+    .pipe(gulp.dest('dist/assets'));
+
   gulp.src('js/**/*.js')
     .pipe(gulp.dest('dist/js'));
 
